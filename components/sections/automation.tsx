@@ -97,7 +97,7 @@ export default function AutomationsPage() {
   const [expandedImage, setExpandedImage] = useState<string | null>(null)
 
   return (
-    <section id="automations" className="min-h-screen bg-background px-4 py-20">
+    <section id="automation" className="min-h-screen bg-background px-4 py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold">

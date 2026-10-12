@@ -10,9 +10,9 @@ const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Automation', href: '#automation' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
-  { label: 'Automation', href: '#automation' },
 ]
 
 export const Navbar = () => {
