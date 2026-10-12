@@ -147,7 +147,7 @@ export const Skills = () => {
                     return (
                       <div
                         key={skill.name}
-                        className="flex items-center gap-2 rounded-lg border border-gray-500/20 px-3 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:border-emerald-500/40"
+                        className="flex items-center gap-2 rounded-lg border border-gray-500/20 px-3 py-2 text-sm font-medium text-foreground"
                       >
                         <SkillIcon className="h-4 w-4 flex-shrink-0" />
 
