@@ -270,7 +270,7 @@ export function Contact() {
               <h3 className="text-xl font-semibold mb-4">Follow me</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com/shachi-git"
+                  href="https://github.com/jp-o-git"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(

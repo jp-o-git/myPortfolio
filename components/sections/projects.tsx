@@ -47,7 +47,7 @@ Application Flow:
     tech: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'MongoDB'],
     category: ['Full-stack'],
     demoUrl: 'https://recruitment-form-silk.vercel.app/apply/initial',
-    sourceUrl: 'https://github.com/Shachi-git/recruitment-form',
+    sourceUrl: 'https://github.com/jp-o-git/recruitment-form',
     features: [
       'Multi-step Form Workflow: User-friendly form progression with client-side validation',
       'Local Data Persistence: Automatically saves progress in localStorage',
@@ -58,25 +58,25 @@ Application Flow:
     ],
   },
   {
-  id: '2',
-  title: 'BrightSmile Dental - Landing Page',
-  description:
-  'A dental landing page template built with Vue.js, Tailwind CSS, and Supabase.',
-  longDescription:
-    'A modern dental landing page template built with Vue.js and Tailwind CSS. It features a responsive design, interactive clinic locations, and Supabase integration for handling form submissions without a custom backend.',
-  image: '/BrightSmile.png',
-  tech: ['Vue.js', 'Vite', 'TailwindCSS', 'Supabase'],
-  category: ['Frontend'],
-  demoUrl: 'https://dental-landingpage-silk.vercel.app/#/',
-  sourceUrl: 'https://github.com/Shachi-git/dental-landingpage',
-  features: [
-    'Responsive dental landing page template',
-    'Interactive clinic location section',
-    'Supabase integration for form submissions',
-    'Mobile-friendly and responsive UI',
-    'Built with reusable Vue.js components',
-  ],
-},
+    id: '2',
+    title: 'BrightSmile Dental - Landing Page',
+    description:
+      'A dental landing page template built with Vue.js, Tailwind CSS, and Supabase.',
+    longDescription:
+      'A modern dental landing page template built with Vue.js and Tailwind CSS. It features a responsive design, interactive clinic locations, and Supabase integration for handling form submissions without a custom backend.',
+    image: '/BrightSmile.png',
+    tech: ['Vue.js', 'Vite', 'TailwindCSS', 'Supabase'],
+    category: ['Frontend'],
+    demoUrl: 'https://dental-landingpage-silk.vercel.app/#/',
+    sourceUrl: 'https://github.com/jp-o-git/dental-landingpage',
+    features: [
+      'Responsive dental landing page template',
+      'Interactive clinic location section',
+      'Supabase integration for form submissions',
+      'Mobile-friendly and responsive UI',
+      'Built with reusable Vue.js components',
+    ],
+  },
   {
     id: '3',
     title: 'Tic-Tac-Toe - Two Player Game',
@@ -88,7 +88,7 @@ Application Flow:
     tech: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
     category: ['Frontend'],
     demoUrl: 'https://tic-tac-toe-rho-murex-43.vercel.app',
-    sourceUrl: 'https://github.com/Shachi-git/Tic-tac-toe',
+    sourceUrl: 'https://github.com/jp-o-git/Tic-tac-toe',
     features: [
       'Two-player mode with turn-based interactions',
       'Win/draw validation for accurate outcomes',
@@ -97,24 +97,24 @@ Application Flow:
       'Planned improvements: AI opponent, diffeculty base, UI animations',
     ],
   },
-{
-  id: '4',
-  title: 'HealthSphere Medical Care',
-  description:
-    'Responsive healthcare landing page built with Vue.js, Tailwind CSS, and Supabase.',
-  longDescription:
-    'Healthcare Landing Page is a modern, responsive web application built with Vue.js and Tailwind CSS. The project provides a clean and professional healthcare interface with service sections, FAQs, responsive layouts, and an inquiry form powered by Supabase. It focuses on accessibility, mobile responsiveness, performance, and a polished user experience.',
-  image: '/healthcare-logo.png',
-  tech: ['Vue.js', 'Tailwind CSS', 'Supabase'],
-  category: ['FrontEnd', 'API integration'],
-  demoUrl: 'https://health-landingpage-one.vercel.app',
-  sourceUrl: 'https://github.com/Shachi-git/health-landingpage',
-  features: [
-    'Designed and developed a responsive healthcare landing page with a modern and professional UI.',
-    'Implemented a healthcare inquiry form with client-side validation and Supabase integration.',
-    'Built responsive sections, FAQ interactions, and call-to-action elements optimized for mobile and desktop users.',
-  ],
-},
+  {
+    id: '4',
+    title: 'HealthSphere Medical Care',
+    description:
+      'Responsive healthcare landing page built with Vue.js, Tailwind CSS, and Supabase.',
+    longDescription:
+      'Healthcare Landing Page is a modern, responsive web application built with Vue.js and Tailwind CSS. The project provides a clean and professional healthcare interface with service sections, FAQs, responsive layouts, and an inquiry form powered by Supabase. It focuses on accessibility, mobile responsiveness, performance, and a polished user experience.',
+    image: '/healthcare-logo.png',
+    tech: ['Vue.js', 'Tailwind CSS', 'Supabase'],
+    category: ['FrontEnd', 'API integration'],
+    demoUrl: 'https://health-landingpage-one.vercel.app',
+    sourceUrl: 'https://github.com/jp-o-git/health-landingpage',
+    features: [
+      'Designed and developed a responsive healthcare landing page with a modern and professional UI.',
+      'Implemented a healthcare inquiry form with client-side validation and Supabase integration.',
+      'Built responsive sections, FAQ interactions, and call-to-action elements optimized for mobile and desktop users.',
+    ],
+  },
   {
     id: '5',
     title: 'Emma & Daniel - Wedding Website',
@@ -126,7 +126,7 @@ Application Flow:
     tech: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
     category: ['Frontend', 'UI/UX'],
     demoUrl: 'https://wedding-design-alpha.vercel.app',
-    sourceUrl: 'https://github.com/Shachi-git/wedding-design',
+    sourceUrl: 'https://github.com/jp-o-git/wedding-design',
     features: [
       'Modern and elegant wedding website design',
       'Dreamy fairytale intro animation with floating petals',
@@ -139,6 +139,25 @@ Application Flow:
       'Wedding countdown timer',
       'Ambient music controls',
       'Reusable React and Tailwind CSS components',
+    ],
+  },
+  {
+    id: '6',
+    title: 'TallyBook - Inventory Management',
+    description:
+      'A full-stack inventory management app with product tracking, stock alerts, and order management.',
+    longDescription:
+      'A full-stack inventory management application built with React, FastAPI, PostgreSQL, and Alembic. It helps users manage products, monitor stock levels, track reorder alerts, and manage customer orders.',
+    image: '/tallybook.png',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'Alembic', 'Supabase', 'n8n'],
+    category: ['Full-stack'],
+    demoUrl: 'https://tallybook-sigma.vercel.app',
+    sourceUrl: 'https://github.com/jp-o-git/tallybook',
+    features: [
+      'Product and inventory management',
+      'Low-stock alerts and reorder tracking',
+      'Customer order management',
+      'FastAPI backend with PostgreSQL integration',
     ],
   },
 ]

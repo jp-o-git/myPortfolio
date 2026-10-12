@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer'
 import { About } from '@/components/sections/about'
+import AutomationsPage from '@/components/sections/automation'
 import { Contact } from '@/components/sections/contact'
 import { Experience } from '@/components/sections/experience'
 import { Home } from '@/components/sections/home'
@@ -11,8 +12,9 @@ export default function HomePage() {
     <div className="min-h-full">
       <Home />
       <About />
-      <Experience/>
+      <Experience />
       <Skills />
+      <AutomationsPage />
       <Projects />
       <Contact />
       <Footer />

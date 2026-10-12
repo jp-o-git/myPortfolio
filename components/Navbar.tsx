@@ -12,6 +12,7 @@ const navItems = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Automation', href: '#automation' },
 ]
 
 export const Navbar = () => {

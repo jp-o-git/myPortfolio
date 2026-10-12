@@ -87,7 +87,7 @@ export const Home = () => {
 
           <div className="flex justify-center space-x-6">
             <a
-              href="https://github.com/shachi-git"
+              href="https://github.com/jp-o-git"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border transition-all duration-300 group"
