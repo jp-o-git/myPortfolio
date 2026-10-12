@@ -5,15 +5,16 @@ import {
   Palette,
   Server,
   Globe,
-  Atom,
   Zap,
   FileText,
-  Layers,
   GitBranch,
   Settings,
   Accessibility,
   Lightbulb,
   Users,
+  Workflow,
+  Terminal,
+  Bot,
 } from 'lucide-react'
 import { FaVuejs, FaPython } from 'react-icons/fa'
 import {
@@ -25,29 +26,40 @@ import {
   SiPostgresql,
 } from 'react-icons/si'
 
+import { FaReact, FaNodeJs } from 'react-icons/fa'
+import {
+  SiNextdotjs,
+  SiBootstrap,
+  SiMongodb,
+  SiSupabase,
+  SiVercel,
+  SiN8N,
+} from 'react-icons/si'
+
 const skillCategories = [
   {
     id: 'languages',
     label: 'Languages',
     icon: Code,
     skills: [
-      { name: 'TypeScript', icon: SiTypescript },
       { name: 'JavaScript', icon: SiJavascript },
+      { name: 'TypeScript', icon: SiTypescript },
       { name: 'Python', icon: FaPython },
     ],
   },
   {
     id: 'frontend',
-    label: 'Front-end',
+    label: 'Front-end Development',
     icon: Globe,
     skills: [
-      { name: 'React', icon: Atom },
+      { name: 'React', icon: FaReact },
+      { name: 'Next.js', icon: SiNextdotjs },
       { name: 'Vue.js', icon: FaVuejs },
-      { name: 'Next.js', icon: Zap },
-      { name: 'HTML/CSS', icon: FileText },
-      { name: 'Tailwind CSS', icon: SiTailwindcss },
-      { name: 'Bootstrap', icon: Layers },
       { name: 'React Query', icon: SiReactquery },
+      { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'Bootstrap', icon: SiBootstrap },
+      { name: 'HTML', icon: FileText },
+      { name: 'CSS', icon: Palette },
     ],
   },
   {
@@ -56,35 +68,39 @@ const skillCategories = [
     icon: Server,
     skills: [
       { name: 'FastAPI', icon: SiFastapi },
+      { name: 'REST APIs', icon: Workflow },
       { name: 'PostgreSQL', icon: SiPostgresql },
+      { name: 'Supabase', icon: SiSupabase },
     ],
   },
   {
     id: 'tools',
-    label: 'Version Control',
+    label: 'Development Tools',
     icon: Settings,
     skills: [
       { name: 'Git', icon: GitBranch },
-      { name: 'Bitbucket', icon: GitBranch },
-      { name: 'SourceTree', icon: GitBranch },
+      { name: 'Vercel', icon: SiVercel },
+      { name: 'Jira', icon: Users },
+    ],
+  },
+  {
+    id: 'automation',
+    label: 'AI & Automation',
+    icon: Bot,
+    skills: [
+      { name: 'AI Coding Tools', icon: Terminal },
+      { name: 'n8n', icon: Workflow },
+      { name: 'Zapier', icon: Zap },
     ],
   },
   {
     id: 'design',
-    label: 'Design & Others',
+    label: 'Design & Practices',
     icon: Palette,
     skills: [
       { name: 'Canva', icon: Lightbulb },
-      { name: 'UI/UX Design', icon: Lightbulb },
+      { name: 'UI/UX Design', icon: Palette },
       { name: 'Web Accessibility', icon: Accessibility },
-    ],
-  },
-  {
-    id: 'management',
-    label: 'Development Practices',
-    icon: Users,
-    skills: [
-      { name: 'Jira', icon: Users },
       { name: 'Agile/Scrum', icon: Users },
     ],
   },
