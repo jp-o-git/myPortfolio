@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import cn from 'classnames'
+import Image from 'next/image'
+import jplogo from '../public/jp-logo.png'
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -67,7 +69,7 @@ export const Navbar = () => {
       <div className="mx-auto max-w-7xl">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="text-xl font-bold gradient-text">Portfolio</div>
+          <Image src={jplogo} alt="JP Logo" placeholder="blur" height={75} />
 
           {/* Desktop Navigation */}
           <div className="hidden items-center space-x-8 md:flex">
