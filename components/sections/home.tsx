@@ -62,9 +62,9 @@ export const Home = () => {
             John Paul <span className="gradient-text">Olimpo</span>
           </h1>
           <p className="text-xl text-gray-400/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Junior Full-Stack Developer with experience in frontend development,
-            currently growing my backend skills and working toward becoming a
-            well-rounded full-stack developer.
+            Junior Full-Stack Developer with experience building web
+            applications, integrating frontend interfaces with backend services,
+            and working with databases and REST APIs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

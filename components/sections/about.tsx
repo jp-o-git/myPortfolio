@@ -28,34 +28,27 @@ export const About = () => {
               <p>
                 I am a Computer Engineering graduate from the Polytechnic
                 University of the Philippines with professional experience in
-                web development. I have worked on frontend interfaces, websites,
-                and web applications using technologies such as React, Next.js,
-                TypeScript, Vue.js, and Tailwind CSS.
+                full-stack web development. I have worked on frontend
+                interfaces, websites, and web applications using React, Next.js,
+                TypeScript, Vue.js, and Tailwind CSS, along with backend
+                technologies such as Python, FastAPI, REST APIs, and PostgreSQL.
               </p>
 
               <p>
-                My professional experience has mainly been focused on frontend
-                development, while also giving me opportunities to work with
-                backend systems, databases, and application workflows. These
-                experiences have motivated me to expand beyond frontend
-                development and build a stronger understanding of the full web
-                development process.
+                My experience includes building user interfaces, implementing
+                application workflows, integrating frontend components with
+                backend APIs, working with databases, and debugging application
+                issues. I enjoy understanding how different parts of a web
+                application work together to deliver functional and reliable
+                solutions.
               </p>
 
               <p>
-                I am currently developing my backend skills with Python,
-                FastAPI, REST APIs, and PostgreSQL as I work toward becoming a
-                Junior Full-Stack Developer. I enjoy learning how frontend
-                applications communicate with backend services and how the
-                different parts of a web application work together.
-              </p>
-
-              <p>
-                I believe learning never really stops, and I am always looking
-                for ways to improve through professional experience, personal
-                projects, and continuous study. My goal is to continue growing
-                as a developer, take on more backend responsibilities, and
-                become a well-rounded full-stack developer.
+                I am continuously strengthening my full-stack development skills
+                through professional experience, personal projects, and hands-on
+                learning. My goal is to build scalable web applications, take on
+                more complex development challenges, and continue growing as a
+                well-rounded full-stack developer.
               </p>
             </div>
 
