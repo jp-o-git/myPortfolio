@@ -26,33 +26,42 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: '1',
-    title: 'Junior Front-end Developer',
-    company: 'Lion Sales Funnel',
-    duration: 'September 2025 – September 2026',
+    title: 'Frontend Developer',
+    company: 'Lion Sales Funnel · Freelance',
+    duration: 'September 2025 - September 2026',
     description:
-      'Worked as an on-call frontend developer, building and maintaining websites and landing pages for different projects.',
+      'Built and deployed client landing pages, Kajabi sales pages, and a Next.js recruiting form as an on-call frontend developer.',
     longDescription:
-      'Worked as an on-call frontend developer, helping build and maintain websites and landing pages for different projects. My work involved translating designs into responsive web interfaces, implementing updates based on project requirements, fixing frontend issues, and maintaining existing websites.',
+      'Worked as an on-call frontend developer for Lion Sales Funnel, delivering client pages against fixed launch deadlines. I built landing pages in React and Vue, including one reusable design adapted into three client sites by swapping content only, created Kajabi sales and replay pages that matched the client\u2019s requested UI and brand guidelines, and built a Next.js recruiting form with validation and a scored quiz.',
     category: ['Frontend', 'Web Development'],
-    tech: ['React', 'Vue.js', 'Next.js', 'JavaScript', 'HTML', 'CSS', 'Git'],
+    tech: [
+      'React',
+      'Vue.js',
+      'Next.js',
+      'Kajabi',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Git',
+      'Canva',
+    ],
     responsibilities: [
-      'Built and maintained websites and landing pages using React, Vue, and Next.js',
-      'Translated designs into responsive and functional web interfaces',
-      'Implemented layout, styling, and content updates based on project requirements',
-      'Fixed frontend issues and maintained existing websites',
-      'Used Git and other development tools as part of the development workflow',
-      'Assisted with internal web-based projects and forms',
+      'Built and deployed 5 client landing pages in React and Vue, including one reusable design adapted into 3 client sites by swapping content only',
+      'Built a Kajabi sales page and a workshop replay page for a client launch, matching the client\u2019s requested UI and brand guidelines, with positive client feedback',
+      'Built a recruiting application form in Next.js with input validation and a quiz with a score result, submitting responses directly to the company\u2019s database',
+      'Delivered each page against fixed launch deadlines',
+      'Handled manual QA and bug reporting, and edited website graphics in Canva',
     ],
   },
   {
     id: '2',
-    title: 'Junior Full Stack Web Developer',
-    company: 'Ally Public Adjusting',
-    duration: 'January 2026 – August 2026',
+    title: 'Full Stack Developer',
+    company: 'Ally Public Adjusting · Contract',
+    duration: 'January 2026 - August 2026',
     description:
-      'Worked on frontend interfaces, web workflows, and backend-related tasks based on project requirements and design specs.',
+      'Built React interfaces and database queries for an insurance claims platform, and improved its text-extraction pipeline to ~96% word-level F1.',
     longDescription:
-      'Worked across different parts of web applications, primarily focusing on frontend interfaces and workflows while also contributing to backend-related tasks. I worked with PostgreSQL, FastAPI, and REST APIs, gaining practical experience in how frontend applications connect with backend services and databases.',
+      'Worked across the frontend and backend of an insurance claims platform. On the frontend I built React UI components, workflows, and API integrations. On the backend I wrote the database queries that fetch extracted claim data, such as the date of loss, for display in the interface, and I worked on the document-extraction pipeline, improving text-extraction accuracy from about 85% to about 96% word-level F1 across 97 test documents.',
     category: ['Full-stack'],
     tech: [
       'React',
@@ -63,12 +72,10 @@ const experiences: Experience[] = [
       'Alembic',
     ],
     responsibilities: [
-      'Built and maintained frontend interfaces and user workflows',
-      'Translated design specifications into responsive web pages',
-      'Worked on document and text extraction-related fixes',
-      'Worked with PostgreSQL and backend functionality',
-      'Explored FastAPI and REST APIs to strengthen backend development skills',
-      'Gained experience working across frontend, backend, and database components of web applications',
+      'Built React UI components, workflows, and API integrations',
+      'Wrote the database queries that fetch extracted claim data (such as date of loss) for display in the frontend',
+      'Improved the backend extraction pipeline, raising text-extraction accuracy from ~85% to ~96% word-level F1 across 97 test documents by debugging and refining extraction logic and prompt context',
+      'Removed duplicate extracted content by ranking extracted tables by size and checking whether larger tables already covered smaller snippets',
     ],
   },
   {
@@ -77,13 +84,13 @@ const experiences: Experience[] = [
     company: 'Hooli Software · Microsoft Project',
     duration: 'June 2025 – September 2025',
     description:
-      'Worked on frontend development, accessibility, usability, and performance as part of a Microsoft-related project.',
+      'Improved web accessibility with keyboard navigation and screen-reader labels on a Microsoft-related project.',
     longDescription:
-      'Worked as part of a collaborative team on DiSH, a Microsoft-related project. My work focused on improving web accessibility, usability, and performance while participating in Agile development practices alongside engineers, QA, designers, and product managers.',
+      'Worked as part of a collaborative team on DiSH, a Microsoft-related project. My work focused on web accessibility, usability, and performance, and I took part in Agile development alongside engineers, QA, designers, and product managers.',
     category: ['Frontend', 'UI/UX', 'Accessibility'],
     tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Web Accessibility', 'Git'],
     responsibilities: [
-      'Improved web accessibility compliance to make the website more inclusive for diverse users',
+      'Improved website accessibility by implementing keyboard navigation and screen-reader labels for a wider range of users',
       'Collaborated in Agile sprints with engineers, QA, designers, and product managers',
       'Enhanced usability and performance to improve the overall user experience',
       'Worked within a collaborative software development environment',
@@ -95,13 +102,13 @@ const experiences: Experience[] = [
     company: 'Hooli Software',
     duration: 'August 2024 – October 2024',
     description:
-      'Worked on UI modifications and bug fixes based on design specifications.',
+      'Delivered pixel-accurate UI changes and bug fixes in React and Tailwind CSS from design specifications.',
     longDescription:
-      'Worked on frontend improvements for Zentive, implementing UI changes and fixing bugs based on design specifications. This experience helped strengthen my understanding of React-based development and translating designs into functional interfaces.',
+      'Worked on frontend improvements for Zentive, delivering pixel-accurate UI changes and bug fixes in React and Tailwind CSS from design specifications. This experience strengthened my understanding of React-based development and of translating designs into functional interfaces.',
     category: ['Frontend', 'UI Development'],
     tech: ['React', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS', 'Git'],
     responsibilities: [
-      'Implemented UI modifications based on design specifications',
+      'Implemented pixel-accurate UI changes based on design specifications',
       'Fixed frontend bugs and interface issues',
       'Used React to develop and update user interfaces',
       'Used Tailwind CSS for styling and responsive layouts',
