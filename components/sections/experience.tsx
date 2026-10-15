@@ -28,7 +28,7 @@ const experiences: Experience[] = [
     id: '1',
     title: 'Frontend Developer',
     company: 'Lion Sales Funnel · Freelance',
-    duration: 'September 2025 - September 2026',
+    duration: 'October 2025 - October 2026',
     description:
       'Built and deployed client landing pages, Kajabi sales pages, and a Next.js recruiting form as an on-call frontend developer.',
     longDescription:
