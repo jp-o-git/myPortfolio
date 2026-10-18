@@ -108,15 +108,18 @@ const skillCategories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="bg-background px-4 py-24">
+    <section id="skills" className="px-4 py-24">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
-        <div className="mb-16 text-center">
+        <div className="section-heading">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+            The toolkit
+          </p>
           <h2 className="mb-4 text-4xl font-bold">
             My <span className="gradient-text">Skills</span>
           </h2>
 
-          <p className="mx-auto max-w-2xl text-xl text-gray-400/90">
+          <p className="max-w-2xl text-xl text-gray-400/90">
             Technologies and tools I have worked with through professional
             experience, projects, and hands-on practice.
           </p>
@@ -128,10 +131,7 @@ export const Skills = () => {
             const CategoryIcon = category.icon
 
             return (
-              <div
-                key={category.id}
-                className="rounded-lg border border-gray-500/20 p-6 shadow-[0_0_15px_rgba(0,0,2,0.2)]"
-              >
+              <div key={category.id} className="card p-6">
                 {/* Category Header */}
                 <div className="mb-6 flex items-center gap-3">
                   <CategoryIcon className="h-6 w-6" />

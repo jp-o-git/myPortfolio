@@ -29,6 +29,89 @@ interface Project {
 const projects: Project[] = [
   {
     id: '1',
+    title: 'TallyBook - Inventory Management',
+    description:
+      'A full-stack inventory management app with product tracking, stock alerts, and order management.',
+    longDescription:
+      'A full-stack inventory management application built with React, FastAPI, PostgreSQL, and Alembic. It helps users manage products, monitor stock levels, track reorder alerts, and manage customer orders.',
+    image: '/tallybook.png',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'Alembic', 'Supabase', 'n8n'],
+    category: ['Full-stack'],
+    demoUrl: 'https://tallybook-sigma.vercel.app',
+    sourceUrl: 'https://github.com/jp-o-git/tallybook',
+    features: [
+      'Product and inventory management',
+      'Low-stock alerts and reorder tracking',
+      'Customer order management',
+      'FastAPI backend with PostgreSQL integration',
+    ],
+  },
+  {
+    id: '2',
+    title: 'BrightSmile Dental - Landing Page',
+    description:
+      'A dental landing page template built with Vue.js, Tailwind CSS, and Supabase.',
+    longDescription:
+      'A modern dental landing page template built with Vue.js and Tailwind CSS. It features a responsive design, interactive clinic locations, and Supabase integration for handling form submissions without a custom backend.',
+    image: '/BrightSmile.png',
+    tech: ['Vue.js', 'Vite', 'TailwindCSS', 'Supabase'],
+    category: ['Frontend'],
+    demoUrl: 'https://dental-landingpage-silk.vercel.app/#/',
+    sourceUrl: 'https://github.com/jp-o-git/dental-landingpage',
+    features: [
+      'Responsive dental landing page template',
+      'Interactive clinic location section',
+      'Supabase integration for form submissions',
+      'Mobile-friendly and responsive UI',
+      'Built with reusable Vue.js components',
+    ],
+  },
+  {
+    id: '3',
+    title: 'HealthSphere Medical Care',
+    description:
+      'Responsive healthcare landing page built with Vue.js, Tailwind CSS, and Supabase.',
+    longDescription:
+      'Healthcare Landing Page is a modern, responsive web application built with Vue.js and Tailwind CSS. The project provides a clean and professional healthcare interface with service sections, FAQs, responsive layouts, and an inquiry form powered by Supabase. It focuses on accessibility, mobile responsiveness, performance, and a polished user experience.',
+    image: '/healthcare-logo.png',
+    tech: ['Vue.js', 'Tailwind CSS', 'Supabase'],
+    category: ['FrontEnd', 'API integration'],
+    demoUrl: 'https://health-landingpage-one.vercel.app',
+    sourceUrl: 'https://github.com/jp-o-git/health-landingpage',
+    features: [
+      'Designed and developed a responsive healthcare landing page with a modern and professional UI.',
+      'Implemented a healthcare inquiry form with client-side validation and Supabase integration.',
+      'Built responsive sections, FAQ interactions, and call-to-action elements optimized for mobile and desktop users.',
+    ],
+  },
+  {
+    id: '4',
+    title: 'Emma & Daniel - Wedding Website',
+    description:
+      'A modern and elegant wedding website designed to give guests a beautiful digital experience.',
+    longDescription:
+      'A responsive wedding website created with Next.js, React, TypeScript, and Tailwind CSS. The website brings together the couple’s story, wedding details, event schedule, photo gallery, RSVP form, frequently asked questions, and countdown timer in one polished experience. It also includes a dreamy fairytale-style intro animation with floating petals, ambient music controls, and smooth page interactions. The design focuses on elegance, responsiveness, and ease of use across desktop and mobile devices.',
+    image: '/wedding-website.png',
+    tech: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
+    category: ['Frontend', 'UI/UX'],
+    demoUrl: 'https://wedding-design-alpha.vercel.app',
+    sourceUrl: 'https://github.com/jp-o-git/wedding-design',
+    features: [
+      'Modern and elegant wedding website design',
+      'Dreamy fairytale intro animation with floating petals',
+      'Responsive layout for desktop, tablet, and mobile',
+      'Couple story presented in a chronological timeline',
+      'Wedding details and event schedule sections',
+      'Interactive photo gallery with lightbox support',
+      'RSVP form with numeric multi-digit guest count',
+      'FAQ accordion section',
+      'Wedding countdown timer',
+      'Ambient music controls',
+      'Reusable React and Tailwind CSS components',
+    ],
+  },
+  {
+    id: '5',
     title: 'Application Form',
     description:
       'A full-stack recruitment form built with Next.js, TypeScript, and MongoDB.',
@@ -57,122 +140,22 @@ Application Flow:
       'Toast Feedback System: Provides instant user feedback on submission success or error',
     ],
   },
-  {
-    id: '2',
-    title: 'BrightSmile Dental - Landing Page',
-    description:
-      'A dental landing page template built with Vue.js, Tailwind CSS, and Supabase.',
-    longDescription:
-      'A modern dental landing page template built with Vue.js and Tailwind CSS. It features a responsive design, interactive clinic locations, and Supabase integration for handling form submissions without a custom backend.',
-    image: '/BrightSmile.png',
-    tech: ['Vue.js', 'Vite', 'TailwindCSS', 'Supabase'],
-    category: ['Frontend'],
-    demoUrl: 'https://dental-landingpage-silk.vercel.app/#/',
-    sourceUrl: 'https://github.com/jp-o-git/dental-landingpage',
-    features: [
-      'Responsive dental landing page template',
-      'Interactive clinic location section',
-      'Supabase integration for form submissions',
-      'Mobile-friendly and responsive UI',
-      'Built with reusable Vue.js components',
-    ],
-  },
-  {
-    id: '3',
-    title: 'Tic-Tac-Toe - Two Player Game',
-    description:
-      'A simple two-player digital Tic-Tac-Toe game with responsive UI and turn-based logic.',
-    longDescription:
-      'This project recreates the classic pencil-and-paper game Tic-Tac-Toe in a modern web format using Next.js and deployed on Vercel. Designed for two players, it features responsive design, smooth interactions, and accurate game logic for win/draw conditions. Future improvements are planned to extend functionality and user engagement.',
-    image: '/3T.png',
-    tech: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
-    category: ['Frontend'],
-    demoUrl: 'https://tic-tac-toe-rho-murex-43.vercel.app',
-    sourceUrl: 'https://github.com/jp-o-git/Tic-tac-toe',
-    features: [
-      'Two-player mode with turn-based interactions',
-      'Win/draw validation for accurate outcomes',
-      'Responsive design for smooth play across devices',
-      'Deployed on Vercel',
-      'Planned improvements: AI opponent, diffeculty base, UI animations',
-    ],
-  },
-  {
-    id: '4',
-    title: 'HealthSphere Medical Care',
-    description:
-      'Responsive healthcare landing page built with Vue.js, Tailwind CSS, and Supabase.',
-    longDescription:
-      'Healthcare Landing Page is a modern, responsive web application built with Vue.js and Tailwind CSS. The project provides a clean and professional healthcare interface with service sections, FAQs, responsive layouts, and an inquiry form powered by Supabase. It focuses on accessibility, mobile responsiveness, performance, and a polished user experience.',
-    image: '/healthcare-logo.png',
-    tech: ['Vue.js', 'Tailwind CSS', 'Supabase'],
-    category: ['FrontEnd', 'API integration'],
-    demoUrl: 'https://health-landingpage-one.vercel.app',
-    sourceUrl: 'https://github.com/jp-o-git/health-landingpage',
-    features: [
-      'Designed and developed a responsive healthcare landing page with a modern and professional UI.',
-      'Implemented a healthcare inquiry form with client-side validation and Supabase integration.',
-      'Built responsive sections, FAQ interactions, and call-to-action elements optimized for mobile and desktop users.',
-    ],
-  },
-  {
-    id: '5',
-    title: 'Emma & Daniel - Wedding Website',
-    description:
-      'A modern and elegant wedding website designed to give guests a beautiful digital experience.',
-    longDescription:
-      'A responsive wedding website created with Next.js, React, TypeScript, and Tailwind CSS. The website brings together the couple’s story, wedding details, event schedule, photo gallery, RSVP form, frequently asked questions, and countdown timer in one polished experience. It also includes a dreamy fairytale-style intro animation with floating petals, ambient music controls, and smooth page interactions. The design focuses on elegance, responsiveness, and ease of use across desktop and mobile devices.',
-    image: '/wedding-website.png',
-    tech: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
-    category: ['Frontend', 'UI/UX'],
-    demoUrl: 'https://wedding-design-alpha.vercel.app',
-    sourceUrl: 'https://github.com/jp-o-git/wedding-design',
-    features: [
-      'Modern and elegant wedding website design',
-      'Dreamy fairytale intro animation with floating petals',
-      'Responsive layout for desktop, tablet, and mobile',
-      'Couple story presented in a chronological timeline',
-      'Wedding details and event schedule sections',
-      'Interactive photo gallery with lightbox support',
-      'RSVP form with numeric multi-digit guest count',
-      'FAQ accordion section',
-      'Wedding countdown timer',
-      'Ambient music controls',
-      'Reusable React and Tailwind CSS components',
-    ],
-  },
-  {
-    id: '6',
-    title: 'TallyBook - Inventory Management',
-    description:
-      'A full-stack inventory management app with product tracking, stock alerts, and order management.',
-    longDescription:
-      'A full-stack inventory management application built with React, FastAPI, PostgreSQL, and Alembic. It helps users manage products, monitor stock levels, track reorder alerts, and manage customer orders.',
-    image: '/tallybook.png',
-    tech: ['React', 'FastAPI', 'PostgreSQL', 'Alembic', 'Supabase', 'n8n'],
-    category: ['Full-stack'],
-    demoUrl: 'https://tallybook-sigma.vercel.app',
-    sourceUrl: 'https://github.com/jp-o-git/tallybook',
-    features: [
-      'Product and inventory management',
-      'Low-stock alerts and reorder tracking',
-      'Customer order management',
-      'FastAPI backend with PostgreSQL integration',
-    ],
-  },
 ]
 
 export function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <section id="projects" className="bg-background py-20 px-4">
+    <section id="projects" className="py-20 px-4">
       <div className="max-w-7xl mx-auto ">
-        <div className="text-center mb-16">
+        <div className="section-heading">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+            Selected work
+          </p>
           <h2 className="text-4xl mb-4 font-bold">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-xl max-w-2xl mx-auto text-gray-400/90">
+          <p className="text-xl max-w-2xl text-gray-400/90">
             A showcase of my recent work, demonstrating my expertise in various
             programming languages and my passion for web development.
           </p>
@@ -183,14 +166,12 @@ export function Projects() {
             <div
               key={project.id}
               className={cn(
-                'border-gray-500/20 border-2 rounded-xl',
-                'transition-all duration-300 shadow-[0_0_15px_rgba(0,0,2,0.2)]',
-                'hover:shadow-[0_0_25px_rgba(16,185,129,0.8)] animate-slide-up p-9 transform hover:translate-y-[-10px]',
+                'editorial-card animate-slide-up p-6 cursor-pointer',
               )}
               style={{ animationDelay: `${index * 150}ms` }}
               onClick={() => setSelectedProject(project)}
             >
-              <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden shadow-sm shadow-black">
+              <div className="aspect-video overflow-hidden rounded-md bg-[#e8e1d7] mb-3">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -203,7 +184,7 @@ export function Projects() {
                 {project.category.slice(0, 3).map((category) => (
                   <span
                     key={category}
-                    className="inline-block px-3 py-1 text-xs font-medium p-3 bg-emerald-300/10 text-emerald-400 rounded-full mb-2"
+                    className="inline-block px-3 py-1 text-xs font-medium p-3 accent-soft accent-text rounded-full mb-2"
                   >
                     {category}
                   </span>
@@ -219,7 +200,7 @@ export function Projects() {
                 {project.tech.slice(0, 3).map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 py-1 text-xs bg-green-900/20 text-inherit rounded-md border"
+                    className="px-2 py-1 text-xs neutral-soft text-inherit rounded-md border"
                   >
                     {tech}
                   </span>
@@ -233,7 +214,7 @@ export function Projects() {
               <div className="flex gap-3 mt-auto">
                 <Button
                   size="sm"
-                  className="flex-1 gradient-bg"
+                  className="flex-1 bg text-white"
                   onClick={(e) => {
                     e.stopPropagation()
                     setSelectedProject(project)
@@ -244,7 +225,7 @@ export function Projects() {
                 <Button
                   size="sm"
                   variant="outline"
-                  className="ghost border font-medium border-gray-500/20 hover:text-inherit contact-btn p-2"
+                  className="ghost border font-medium border-[var(--line)] p-3 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] p-2"
                   onClick={(e) => {
                     e.stopPropagation()
                     window.open(project.demoUrl, '_blank')
@@ -255,7 +236,7 @@ export function Projects() {
                 <Button
                   size="sm"
                   variant="outline"
-                  className="ghost border font-medium border-gray-500/20 hover:text-inherit contact-btn p-2"
+                  className="ghost border font-medium border-[var(--line)] p-3 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] p-2"
                   onClick={(e) => {
                     e.stopPropagation()
                     window.open(project.sourceUrl, '_blank')
@@ -304,7 +285,7 @@ export function Projects() {
                     <ul className="space-y-2">
                       {selectedProject.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 accent-fill rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-400/90">{feature}</span>
                         </li>
                       ))}
@@ -334,7 +315,7 @@ export function Projects() {
                                   href={url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-emerald-400 hover:underline break-all"
+                                  className="accent-text hover:underline break-all"
                                 >
                                   {url}
                                 </a>
@@ -353,7 +334,7 @@ export function Projects() {
                       {selectedProject.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-green-900/20 text-inherit rounded-lg border font-medium"
+                          className="px-3 py-1 neutral-soft text-inherit rounded-lg border font-medium"
                         >
                           {tech}
                         </span>
@@ -363,7 +344,7 @@ export function Projects() {
 
                   <div className="flex gap-4 pt-4">
                     <Button
-                      className="gradient-bg font-medium hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.4)] hover:scale-105 flex-1"
+                      className="bg font-medium hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.4)] hover:scale-105 flex-1"
                       onClick={() =>
                         window.open(selectedProject.demoUrl, '_blank')
                       }
@@ -373,7 +354,7 @@ export function Projects() {
                     </Button>
                     <Button
                       variant="outline"
-                      className="border font-medium border-gray-500/20 text-emerald-400 hover:text-inherit contact-btn flex-1"
+                      className="border font-medium border-gray-500/20 accent-text hover:text-inherit flex-1"
                       onClick={() =>
                         window.open(selectedProject.sourceUrl, '_blank')
                       }

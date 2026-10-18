@@ -1,8 +1,8 @@
 'use client'
 
 import { Download } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
 import Image from 'next/image'
+import { Button } from '@/components/ui/Button'
 
 export const About = () => {
   const handleDownloadResume = () => {
@@ -13,79 +13,85 @@ export const About = () => {
   }
 
   return (
-    <section
-      id="about"
-      className="bg-background py-32 lg:py-32 md:justify-center md:items-center"
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-slide-up px-3">
-            <h2 className="text-4xl mb-6 font-bold">
-              About <span className="gradient-text">Me</span>
-            </h2>
-
-            <div className="space-y-4 flex-grow text-muted-foreground leading-relaxed text-justify text-gray-400/90">
-              <p>
-                I am a Computer Engineering graduate from the Polytechnic
-                University of the Philippines with professional experience in
-                full-stack web development. I have worked on frontend
-                interfaces, websites, and web applications using React, Next.js,
-                TypeScript, Vue.js, and Tailwind CSS, along with backend
-                technologies such as Python, FastAPI, REST APIs, and PostgreSQL.
-              </p>
-
-              <p>
-                My experience includes building user interfaces, implementing
-                application workflows, integrating frontend components with
-                backend APIs, working with databases, and debugging application
-                issues. I enjoy understanding how different parts of a web
-                application work together to deliver functional and reliable
-                solutions.
-              </p>
-
-              <p>
-                I am continuously strengthening my full-stack development skills
-                through professional experience, personal projects, and hands-on
-                learning. My goal is to build scalable web applications, take on
-                more complex development challenges, and continue growing as a
-                well-rounded full-stack developer.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Button
-                onClick={handleDownloadResume}
-                className="gradient-bg group font-medium hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.4)] hover:scale-105"
-              >
-                <Download className="mr-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
-                Download Resume
-              </Button>
-
-              <Button
-                variant="outline"
-                className="ghost border font-medium border-gray-500/20 gradient-text hover:text-inherit contact-btn"
-                onClick={() =>
-                  document
-                    .querySelector('#contact')
-                    ?.scrollIntoView({ behavior: 'smooth' })
-                }
-              >
-                {"Let's"} Connect
-              </Button>
-            </div>
-          </div>
-
-          <div className="hidden lg:block relative border-b-4 border-emerald-400">
+    <section id="about" className="px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+        <div className="relative mx-auto w-full max-w-sm">
+          <div className="absolute -bottom-4 -left-4 h-full w-full bg-[#ded8cc]" />
+          <div className="relative aspect-[4/5] overflow-hidden bg-[#e8e1d7]">
             <Image
               src="/jp.png"
-              alt="JohnPaul-Photo"
+              alt="John Paul Olimpo"
               width={700}
-              height={700}
-              className="ml-5 block"
-              style={{
-                filter: 'drop-shadow(0 0 25px rgba(16,185,129,0.8))',
-              }}
+              height={875}
+              sizes="(max-width: 1024px) 85vw, 32vw"
+              className="h-full w-full object-cover"
             />
+          </div>
+          <p className="relative mt-7 text-xs font-semibold uppercase tracking-[0.18em] text-gray-400/90">
+            A little about me
+          </p>
+        </div>
+
+        <div>
+          <div className="section-heading mb-8">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+              Background
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight">
+              Curious by nature.
+              <br />
+              <span className="text-[var(--accent)]">Developer by craft.</span>
+            </h2>
+          </div>
+
+          <div className="max-w-3xl space-y-5 text-base leading-8 text-gray-400/90">
+            <p>
+              I am a Computer Engineering graduate from the Polytechnic
+              University of the Philippines with professional experience in
+              full-stack web development. I have worked on frontend interfaces,
+              websites, and web applications using React, Next.js, TypeScript,
+              Vue.js, and Tailwind CSS, along with backend technologies such as
+              Python, FastAPI, REST APIs, and PostgreSQL.
+            </p>
+
+            <p>
+              My experience includes building user interfaces, implementing
+              application workflows, integrating frontend components with
+              backend APIs, working with databases, and debugging application
+              issues. I enjoy understanding how different parts of a web
+              application work together to deliver functional and reliable
+              solutions.
+            </p>
+
+            <p>
+              I am continuously strengthening my full-stack development skills
+              through professional experience, personal projects, and hands-on
+              learning. My goal is to build scalable web applications, take on
+              more complex development challenges, and continue growing as a
+              well-rounded full-stack developer.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button
+              onClick={handleDownloadResume}
+              className="h-12 rounded-md bg-[var(--accent)] px-5 font-semibold text-white hover:bg-[var(--accent-dark)]"
+            >
+              <Download className="mr-1 h-4 w-4" />
+              Download resume
+            </Button>
+
+            <Button
+              variant="outline"
+              className="h-12 rounded-md border-[var(--line)] bg-transparent px-5 font-semibold text-foreground hover:border-[var(--accent)] hover:bg-transparent hover:text-[var(--accent)]"
+              onClick={() =>
+                document
+                  .querySelector('#contact')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+            >
+              Let&apos;s connect
+            </Button>
           </div>
         </div>
       </div>

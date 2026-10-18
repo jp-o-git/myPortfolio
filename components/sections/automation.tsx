@@ -97,31 +97,38 @@ export default function AutomationsPage() {
   const [expandedImage, setExpandedImage] = useState<string | null>(null)
 
   return (
-    <section id="automation" className="min-h-screen bg-background px-4 py-20">
+    <section id="automation" className="min-h-screen px-4 py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
+        <div className="section-heading">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+            Less busywork, better flow
+          </p>
           <h1 className="mb-4 text-4xl font-bold">
             Automation <span className="gradient-text">Workflows</span>
           </h1>
-          <p className="mx-auto max-w-2xl text-xl text-gray-400/90">
+          <p className="max-w-2xl text-xl text-gray-400/90">
             A showcase of my Zapier and n8n workflows, demonstrating application
             integrations and process automation.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {automations.map((automation, index) => (
             <article
               key={automation.id}
-              className={cn(
-                'rounded-xl border-2 border-gray-500/20',
-                'shadow-[0_0_15px_rgba(0,0,2,0.2)]',
-                'p-6 transition-all duration-300',
-                'hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(16,185,129,0.35)]',
-              )}
+              role="button"
+              tabIndex={0}
+              className={cn('card cursor-pointer p-6 editorial-card')}
               style={{ animationDelay: `${index * 150}ms` }}
+              onClick={() => setSelectedAutomation(automation)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setSelectedAutomation(automation)
+                }
+              }}
             >
-              <div className="mb-4 flex aspect-video items-center justify-center overflow-hidden rounded-lg bg-muted">
+              <div className="mb-4 flex aspect-video items-center justify-center overflow-hidden rounded-md bg-[#e8e1d7]">
                 {automation.image ? (
                   <Image
                     src={automation.image}
@@ -133,7 +140,7 @@ export default function AutomationsPage() {
                 ) : (
                   <Workflow
                     size={56}
-                    className="text-emerald-400"
+                    className="accent-text"
                     aria-hidden="true"
                   />
                 )}
@@ -143,7 +150,7 @@ export default function AutomationsPage() {
                 {automation.category.map((category) => (
                   <span
                     key={category}
-                    className="mb-2 mr-2 inline-block rounded-full bg-emerald-300/10 px-3 py-1 text-xs font-medium text-emerald-400"
+                    className="mb-2 mr-2 inline-block rounded-full accent-soft px-3 py-1 text-xs font-medium accent-text"
                   >
                     {category}
                   </span>
@@ -162,7 +169,7 @@ export default function AutomationsPage() {
                 {automation.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-md border bg-green-900/20 px-2 py-1 text-xs"
+                    className="rounded-md border neutral-soft px-2 py-1 text-xs"
                   >
                     {tech}
                   </span>
@@ -171,8 +178,11 @@ export default function AutomationsPage() {
 
               <Button
                 size="sm"
-                className="w-full gradient-bg"
-                onClick={() => setSelectedAutomation(automation)}
+                className="w-full bg text-white"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setSelectedAutomation(automation)
+                }}
               >
                 <Zap className="mr-2 h-4 w-4" />
                 View Workflow
@@ -209,7 +219,7 @@ export default function AutomationsPage() {
                       />
                     ) : (
                       <div className="flex h-full items-center justify-center">
-                        <Workflow size={56} className="text-emerald-400" />
+                        <Workflow size={56} className="accent-text" />
                       </div>
                     )}
                   </div>
@@ -238,7 +248,7 @@ export default function AutomationsPage() {
                           key={index}
                           className="flex items-start gap-3 text-gray-400/90"
                         >
-                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-sm text-emerald-400">
+                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full accent-soft text-sm accent-text">
                             {index + 1}
                           </span>
                           {action}
@@ -260,7 +270,7 @@ export default function AutomationsPage() {
                             href={selectedAutomation.sheetUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 hover:underline"
+                            className="inline-flex items-center gap-1.5 text-sm font-medium accent-text hover:underline"
                           >
                             <ExternalLink className="h-4 w-4" />
                             View Output Spreadsheet
@@ -276,7 +286,7 @@ export default function AutomationsPage() {
                                 <div
                                   key={index}
                                   onClick={() => setExpandedImage(imgPath)}
-                                  className="group relative aspect-[16/10] cursor-pointer overflow-hidden rounded-xl border-2 border-gray-500/30 bg-muted transition-all duration-300 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+                                  className="group relative aspect-[16/10] cursor-pointer overflow-hidden rounded-xl border-2 border-gray-500/30 bg-muted transition-all duration-300 hover:border-accent hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
                                 >
                                   <Image
                                     src={imgPath}
@@ -308,7 +318,7 @@ export default function AutomationsPage() {
                           key={feature}
                           className="flex items-start gap-2 text-gray-400/90"
                         >
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full accent-fill" />
                           {feature}
                         </li>
                       ))}
@@ -323,7 +333,7 @@ export default function AutomationsPage() {
                       {selectedAutomation.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-lg border bg-green-900/20 px-3 py-1 text-sm"
+                          className="rounded-lg border neutral-soft px-3 py-1 text-sm"
                         >
                           {tech}
                         </span>

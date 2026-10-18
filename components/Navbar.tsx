@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import cn from 'classnames'
 import Image from 'next/image'
-import jplogo from '../public/jp-logo.png'
+import jpLogo from '../public/jp-logo.png'
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -60,24 +60,38 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 px-2 py-2 transition-all duration-300',
+        'fixed left-0 right-0 top-0 z-50 border-b border-transparent px-4 py-2 transition-all duration-300 sm:px-8',
         isScrolled
-          ? 'bg-background/80 backdrop-blur-lg shadow-md'
+          ? 'border-[var(--line)] bg-background/95 shadow-sm backdrop-blur'
           : 'bg-transparent',
       )}
     >
       <div className="mx-auto max-w-7xl">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Image src={jplogo} alt="JP Logo" placeholder="blur" height={75} />
+        <div className="flex h-14 items-center justify-between">
+          <a
+            href="#home"
+            aria-label="John Paul Olimpo, home"
+            className="flex items-center gap-3"
+          >
+            <Image
+              src={jpLogo}
+              alt="JP Logo"
+              width={36}
+              height={36}
+              className="h-16 w-16 object-contain"
+            />
+            <span className="hidden text-sm font-semibold tracking-tight text-foreground sm:inline">
+              John Paul Olimpo
+            </span>
+          </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center space-x-8 md:flex">
+          <div className="hidden items-center gap-7 lg:flex">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="nav-button cursor-pointer transition-colors duration-100"
+                className="nav-button cursor-pointer text-sm"
               >
                 {item.label}
               </button>
@@ -85,13 +99,14 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="cursor-pointer p-2"
+              className="cursor-pointer p-2 text-foreground hover:bg-black/5"
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -106,13 +121,13 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div
             ref={menuRef}
-            className="mt-2 rounded-lg border bg-background/95 py-4 shadow-medium backdrop-blur-lg md:hidden"
+            className="absolute left-4 right-4 top-[4.25rem] rounded-md border border-[var(--line)] bg-background/95 py-2 shadow-lg backdrop-blur lg:hidden sm:left-8 sm:right-8"
           >
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full px-4 py-3 text-left font-medium text-foreground transition-colors duration-300 hover:text-primary hover:bg-accent-light"
+                className="block w-full px-5 py-3 text-left text-sm font-medium text-foreground transition-colors hover:bg-black/5 hover:text-[var(--accent)]"
               >
                 {item.label}
               </button>

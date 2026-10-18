@@ -100,11 +100,14 @@ export function Contact() {
   return (
     <section id="contact" className="py-10 pb-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl mb-4 font-bold mt-11">
+        <div className="section-heading">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+            Have something in mind?
+          </p>
+          <h2 className="text-4xl mb-4 font-bold">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-xl max-w-2xl mx-auto text-gray-400/90">
+          <p className="text-xl max-w-2xl text-gray-400/90">
             Have a project in mind or want to collaborate? {"I'd"} love to hear
             from you. {"Let's"} create something amazing together!
           </p>
@@ -112,7 +115,7 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="border-gray-500/20 border-2 rounded-xl shadow-[0_0_15px_rgba(0,0,2,0.2)] p-8">
+          <div className="card p-6 sm:p-8">
             <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -129,7 +132,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   placeholder="Your full name"
-                  className="w-full"
+                  className="[&:-webkit-autofill]:[-webkit-text-fill-color:var(--foreground)] [&:-webkit-autofill]:shadow-[0_0_0_1000px_var(--background)_inset]"
                   disabled={isSubmitting}
                 />
               </div>
@@ -147,7 +150,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   placeholder="your.email@example.com"
-                  className="w-full"
+                  className="[&:-webkit-autofill]:[-webkit-text-fill-color:var(--foreground)] [&:-webkit-autofill]:shadow-[0_0_0_1000px_var(--background)_inset]"
                   disabled={isSubmitting}
                 />
               </div>
@@ -165,7 +168,7 @@ export function Contact() {
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   placeholder="Tell me about your project or just say hello..."
                   rows={6}
-                  className="w-full resize-none"
+                  className="[&:-webkit-autofill]:[-webkit-text-fill-color:var(--foreground)] [&:-webkit-autofill]:shadow-[0_0_0_1000px_var(--background)_inset] resize-none"
                   disabled={isSubmitting}
                 />
               </div>
@@ -179,7 +182,7 @@ export function Contact() {
                     !formData.email ||
                     !formData.message
                   }
-                  className="gradient-bg font-medium hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.4)] hover:scale-105 flex-1"
+                  className="bg font-medium text-white hover:bg-[var(--accent-dark)] flex-1"
                 >
                   {isSubmitting ? (
                     <>
@@ -204,7 +207,7 @@ export function Contact() {
                       formData.email === '' &&
                       formData.message === '')
                   }
-                  className="border font-bold border-gray-500/20 gradient-text hover:text-inherit contact-btn"
+                  className="border border-[var(--line)] p-3 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
                 >
                   Reset Form
                 </Button>
@@ -214,12 +217,12 @@ export function Contact() {
 
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="border-gray-500/20 border-2 rounded-xl shadow-[0_0_15px_rgba(0,0,2,0.2)] p-8">
+            <div className="card p-6 sm:p-8">
               <h3 className="text-2xl font-semibold mb-6">{"Let's"} connect</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-emerald-300/10">
-                    <Mail className="h-5 w-5 text-emerald-400" />
+                  <div className="p-3 rounded-lg accent-soft">
+                    <Mail className="h-5 w-5 accent-text" />
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
@@ -233,8 +236,8 @@ export function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-emerald-300/10">
-                    <Phone className="h-5 w-5 text-emerald-400" />
+                  <div className="p-3 rounded-lg accent-soft">
+                    <Phone className="h-5 w-5 accent-text" />
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
@@ -248,8 +251,8 @@ export function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-emerald-300/10">
-                    <MapPin className="h-5 w-5 text-emerald-400" />
+                  <div className="p-3 rounded-lg accent-soft">
+                    <MapPin className="h-5 w-5 accent-text" />
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
@@ -266,7 +269,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="border-gray-500/20 border-2 rounded-xl shadow-[0_0_15px_rgba(0,0,2,0.2)] px-8 py-6">
+            <div className="card px-8 py-6">
               <h3 className="text-xl font-semibold mb-4">Follow me</h3>
               <div className="flex gap-4">
                 <a
@@ -274,9 +277,7 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    'p-3 skills-btn border border-gray-500/20 rounded-lg shadow-[0_0_15px_rgba(0,0,2,0.2)]',
-                    'hover:shadow-[0_0_10px_rgba(16,185,129,0.8)]  hover:text-inherit',
-                    'transition-all duration-300 group',
+                    'p-3 border-[var(--line)] p-3 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] rounded-lg border',
                   )}
                 >
                   <Github className="h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -286,9 +287,7 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    'p-3 skills-btn border border-gray-500/20 rounded-lg shadow-[0_0_15px_rgba(0,0,2,0.2)]',
-                    'hover:shadow-[0_0_10px_rgba(16,185,129,0.8)]  hover:text-inherit',
-                    'transition-all duration-300 group',
+                    'p-3 border-[var(--line)] p-3 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] rounded-lg border',
                   )}
                 >
                   <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -297,7 +296,7 @@ export function Contact() {
             </div>
 
             {/* Availability Status */}
-            <div className="border-gray-500/20 border-2 rounded-xl shadow-[0_0_15px_rgba(0,0,2,0.2)] p-8">
+            <div className="card p-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
                 <h3 className="text-xl font-semibold">Available for work</h3>

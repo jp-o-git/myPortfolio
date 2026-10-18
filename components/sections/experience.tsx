@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Briefcase, Calendar } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -122,14 +122,17 @@ export function Experience() {
     useState<Experience | null>(null)
 
   return (
-    <section id="experience" className="bg-background py-20 px-4">
+    <section id="experience" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="section-heading">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+            Where I&apos;ve worked
+          </p>
           <h2 className="text-4xl mb-4 font-bold">
             My <span className="gradient-text">Experience</span>
           </h2>
 
-          <p className="text-xl max-w-2xl mx-auto text-gray-400/90">
+          <p className="text-xl max-w-2xl text-gray-400/90">
             A look at my professional experience, internships, and the
             technologies I have worked with throughout my development journey.
           </p>
@@ -140,23 +143,16 @@ export function Experience() {
             <div
               key={experience.id}
               className={cn(
-                'border-gray-500/20 border-2 rounded-xl',
-                'transition-all duration-300 shadow-[0_0_15px_rgba(0,0,2,0.2)]',
-                'hover:shadow-[0_0_25px_rgba(16,185,129,0.8)]',
-                'animate-slide-up p-9 transform hover:translate-y-[-10px]',
+                'editorial-card animate-slide-up p-7 cursor-pointer',
               )}
               style={{ animationDelay: `${index * 150}ms` }}
               onClick={() => setSelectedExperience(experience)}
             >
-              <div className="w-14 h-14 rounded-xl bg-emerald-300/10 text-emerald-400 flex items-center justify-center mb-6">
-                <Briefcase className="h-7 w-7" />
-              </div>
-
               <div className="mb-4 flex-wrap gap-2">
                 {experience.category.slice(0, 3).map((category) => (
                   <span
                     key={category}
-                    className="inline-block px-3 py-1 text-xs font-medium p-3 bg-emerald-300/10 text-emerald-400 rounded-full mb-2 mr-2"
+                    className="inline-block px-3 py-1 text-xs font-medium p-3 accent-soft accent-text rounded-full mb-2 mr-2"
                   >
                     {category}
                   </span>
@@ -166,7 +162,7 @@ export function Experience() {
                   {experience.title}
                 </h3>
 
-                <p className="text-emerald-400 font-medium mb-2">
+                <p className="accent-text font-medium mb-2">
                   {experience.company}
                 </p>
 
@@ -184,7 +180,7 @@ export function Experience() {
                 {experience.tech.slice(0, 3).map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 py-1 text-xs bg-green-900/20 text-inherit rounded-md border"
+                    className="px-2 py-1 text-xs neutral-soft text-inherit rounded-md border"
                   >
                     {tech}
                   </span>
@@ -198,7 +194,7 @@ export function Experience() {
               </div>
 
               <Button
-                className="w-full gradient-bg rounded-md px-4 py-2 text-sm font-medium text-white"
+                className="w-full bg rounded-md px-4 py-2 text-sm font-medium text-white"
                 onClick={(e) => {
                   e.stopPropagation()
                   setSelectedExperience(experience)
@@ -225,7 +221,7 @@ export function Experience() {
 
                 <div className="space-y-6">
                   <div>
-                    <p className="text-lg font-medium text-emerald-400">
+                    <p className="text-lg font-medium accent-text">
                       {selectedExperience.company}
                     </p>
 
@@ -252,7 +248,7 @@ export function Experience() {
                       {selectedExperience.responsibilities.map(
                         (responsibility, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 accent-fill rounded-full mt-2 flex-shrink-0"></div>
 
                             <span className="text-gray-400/90">
                               {responsibility}
@@ -272,7 +268,7 @@ export function Experience() {
                       {selectedExperience.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-green-900/20 text-inherit rounded-lg border font-medium"
+                          className="px-3 py-1 neutral-soft text-inherit rounded-lg border font-medium"
                         >
                           {tech}
                         </span>
